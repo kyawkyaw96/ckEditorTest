@@ -1,10 +1,10 @@
 import React from "react";
-import MyEditor from "./components/MyEditor";
+import Home from "./components/Home";
 
 const App = () => {
   return (
-    <div className=' w-2/3 mx-auto'>
-      <MyEditor />
+    <div className=' my-5 w-2/3 mx-auto'>
+      <Home />
     </div>
   );
 };

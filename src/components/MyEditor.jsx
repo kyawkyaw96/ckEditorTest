@@ -4,20 +4,13 @@ import React, { useState } from "react";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
-const MyEditor = () => {
-  const [editorData, setEditorData] = useState("<p>Hello CKEditor!</p>");
-
-  const handleEditorChange = (event, editor) => {
-    const data = editor.getData();
-    setEditorData(data);
-  };
-
+const MyEditor = ({ editorData, setEditorData }) => {
   return (
-    <div>
+    <div className='  border rounded-md outline-[#007bff]'>
       <CKEditor
         editor={ClassicEditor}
         data={editorData}
-        onChange={handleEditorChange}
+        onChange={(e, editor) => setEditorData(editor.getData())}
       />
       {/* <div>
         <p>Editor Content:</p>
